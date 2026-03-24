@@ -1,0 +1,35 @@
+# build
+build
+out
+.gradle
+
+# IDE
+.idea
+.iml
+
+# logs
+.log
+logs
+
+# env
+.env
+.env
+
+# security
+.jks
+.p12
+.pem
+.key
+
+# spring local config
+application-local.yml
+bootstrap-local.yml
+
+# kafka
+kafka-logs
+data
+tmp
+
+# OS
+.DS_Store
+Thumbs.db

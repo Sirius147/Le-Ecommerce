@@ -1,0 +1,65 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: user-service
+#  config:
+#    import: "configserver:http://localhost:8888"
+#  cloud:
+#    config:
+#      name: ecommerce
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  output:
+    ansi:
+      enabled: ALWAYS
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password: sa
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /h2-console
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,beans,busrefresh,info,metrics,prometheus
+  tracing:
+    sampling:
+      probability: 1.0
+    export:
+      zipkin:
+        endpoint: http://localhost:9411/api/v2/spans
+
+greeting:
+  message: "Welcome to LeE-commerce."
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-uri:
+      defaultZone: http://127.0.0.1:8761/eureka
+#
+#token:
+#  expiration_time: 86400000
+#  secret: suck_and_grab_you_young_boobs_and_fuck_her_again_and_again_lee_token
+
+logging:
+  level:
+    com.example.userservice.client: DEBUG
+  pattern:
+    correlation: "[${spring.application.name:},%X{traceId:-},%X{spanId:-}] "
+  include-application-name: false

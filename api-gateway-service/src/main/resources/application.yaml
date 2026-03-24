@@ -1,0 +1,115 @@
+server:
+  port: 8000
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+
+spring:
+  application:
+    name: api-gateway-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          default-filters:
+            - name: GlobalFilter
+              args:
+                baseMessage: Global Filter의 base message입니다.
+                preLogger: true
+                postLogger: true
+          routes:
+            - id: user-service
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/user-service/actuator/**
+                - Method=GET,POST
+              filters:
+                - RemoveRequestHeader=Cookie
+                - RewritePath=/user-service/(?<segment>.*),/$\{segment}
+                - AuthorizationHeaderFilter
+            - id: user-service
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/user-service/login
+                - Method=POST
+              filters:
+                - RemoveRequestHeader=Cookie
+                - RewritePath=/user-service/(?<segment>.*),/$\{segment}
+
+            - id: user-service
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/user-service/users
+                - Method=POST
+              filters:
+                - RemoveRequestHeader=Cookie
+                - RewritePath=/user-service/(?<segment>.*),/$\{segment}
+
+            - id: user-service
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/user-service/**
+                - Method=GET
+              filters:
+                - RemoveRequestHeader=Cookie
+                - RewritePath=/user-service/(?<segment>.*),/$\{segment}
+                - AuthorizationHeaderFilter
+#            - id: user-service
+#              uri: lb://USER-SERVICE
+#              predicates:
+#                - Path=/user-service/**
+#              filters:
+#                - AddRequestHeader=first-header, first-request-header2
+#                - AddResponseHeader=first-response, first-response-header2
+#                - CustomFilter
+#                - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+            - id: catalog-service
+              uri: lb://CATALOG-SERVICE
+              predicates:
+                - Path=/catalog-service/**
+              filters:
+#                - AddRequestHeader=second-header, second-request-header2
+#                - AddResponseHeader=second-response, second-response-header2
+#                - CustomFilter
+                - RewritePath=/catalog-service/(?<segment>.*), /$\{segment}
+            - id: order-service
+              uri: lb://ORDER-SERVICE
+              predicates:
+                - Path=/order-service/**
+              filters:
+#                - AddRequestHeader=second-header, second-request-header2
+#                - AddResponseHeader=second-response, second-response-header2
+#                - CustomFilter
+                - RewritePath=/order-service/(?<segment>.*), /$\{segment}
+# 해당 uri에 대한 접근 설정
+# predicates는 해당 uri에 접근하는 법에 대한 정리 ex) localhost:8000/first-service/welcome
+# id는 서비스의 이름 spring.application.name
+
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.web: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, httptrace,busrefresh,info,metrics,prometheus
+
+#token:
+#  secret: suck_and_grab_you_young_boobs_and_fuck_her_again_and_again_lee_token

@@ -1,0 +1,6 @@
+encrypt:
+  keystore:
+    location: file:///C:/webApp/msa/keystore/apiEncryptionKey.jks
+    password: test1234
+    alias: apiEncryptionKey
+#  key: lee0123456789
