@@ -8,7 +8,7 @@
 
 </br>
 
-이 프로젝트는** MSA(MicroService Architecture) 기반의 전자상거래 시스템**으로,  
+이 프로젝트는 **MSA(MicroService Architecture) 기반의 전자상거래 시스템**으로,  
 
 </br>
 
@@ -21,27 +21,38 @@
 </br>
 
 ⚙️ Key Features
-**MSA** 기반 서비스 분리 및 독립 배포
-**Kafka 기반 이벤트 드리븐 아키텍처** 구현
-Kafka **Connector를 통한 DB 동기화**
-**FeignClient** 활용 **서비스 간 통신**
-**Zipkin**을 활용한 **분산 트레이싱**
-**Prometheus + Actuator** 기반 모니터링
-Docker 기반 **동일 네트워크 그룹 컨테이너 환경** 구성
+
+</br>
+
+* **MSA** 기반 서비스 분리 및 독립 배포 </br>
+* **Kafka 기반 이벤트 드리븐 아키텍처** 구현 </br>
+* Kafka **Connector를 통한 DB 동기화** </br>
+* **FeignClient** 활용 **서비스 간 통신** </br>
+* **Zipkin**을 활용한 **분산 트레이싱** </br>
+* **Prometheus + Actuator** 기반 모니터링 </br>
+* Docker 기반 **동일 네트워크 그룹 컨테이너 환경** 구성 </br>
 
 -----------
 
+</br>
+
 🎯 Purpose
-MSA 구조 설계 및 서비스 간 통신
-Kafka를 활용한 비동기 이벤트 처리
-FeignClient 활용
-분산 시스템에서의 추적(Tracing)과 모니터링(Monitoring) 구현
-실제 운영 환경을 고려한 컨테이너 기반 배포 경험
+
+</br>
+
+1. MSA 구조 설계 및 서비스 간 통신 </br>
+2. Kafka를 활용한 비동기 이벤트 처리 </br>
+3. FeignClient 활용 </br>
+4. 분산 시스템에서의 추적(Tracing)과 모니터링(Monitoring) 구현 </br>
+5. 네트워크 그룹 기반 이미지 배포 </br>
+
 -------------------------
 
+</br>
 
-🏗️ Architecture
-🔹 Microservices 핵심기능
+🏗️ Architecture </br>
+🔹 Microservices 핵심기능 </br>
+
 API Gateway
 로드밸런스드 라우팅 및 인증필터
 User Service
