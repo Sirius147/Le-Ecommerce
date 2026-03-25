@@ -148,54 +148,62 @@ Catalog DB </br>
 
 🏗️ Tests </br>
 
-1. JWT 인증 </br>
 
-<img width="1089" height="757" alt="image (2)" src="https://github.com/user-attachments/assets/5d7bc734-382c-4900-a8f3-bd4a57a2291e" /> </br>
+<details>
+  <summary>1. JWT 인증</summary>
+  <img width="1089" height="757" alt="image (2)" src="https://github.com/user-attachments/assets/5d7bc734-382c-4900-a8f3-bd4a57a2291e" /> </br>
 
-<img width="1102" height="671" alt="image (3)" src="https://github.com/user-attachments/assets/ba68a9be-fcc4-4769-9fcd-e8dba149b432" /> </br>
+  <img width="1102" height="671" alt="image (3)" src="https://github.com/user-attachments/assets/ba68a9be-fcc4-4769-9fcd-e8dba149b432" /> </br>
+</details>
 
-2. Config refresh by Spring Cloud Bus & RabbitMQ </br>
+<details>
+  <summary>2. Config refresh by Spring Cloud Bus & RabbitMQ</summary>
+  <img width="1329" height="120" alt="image (4)" src="https://github.com/user-attachments/assets/6451d8f5-59a1-47ca-90f3-4dad351707f9" />
+</details>
 
-<img width="1329" height="120" alt="image (4)" src="https://github.com/user-attachments/assets/6451d8f5-59a1-47ca-90f3-4dad351707f9" /> </br>
+<details>
+  <summary>FeignClient 활용 서비스 예외처리</summary>
+  <img width="1034" height="453" alt="image (5)" src="https://github.com/user-attachments/assets/2d219944-d55f-429c-9853-e1e6a68ff009" />
+</details>
 
-3. FeignClient 활용 서비스 예외처리 </br>
+<details>
+  <summary>kafka message queuing test</summary>
+  <img width="1111" height="436" alt="image (6)" src="https://github.com/user-attachments/assets/10443152-23e9-4d56-a726-5d2ff935f5c5" />
+</details>
 
-<img width="1034" height="453" alt="image (5)" src="https://github.com/user-attachments/assets/2d219944-d55f-429c-9853-e1e6a68ff009" /> </br>
+<details>
+  <summary>5. kafka Connector Source/Sink 활용 DB 동기화</summary>
+  <img width="940" height="435" alt="image (7)" src="https://github.com/user-attachments/assets/78e43cc4-b4e4-467f-b6cf-6a66649a5790" />
+</details>
 
-4. kafka message queuing test </br>
-
-<img width="1111" height="436" alt="image (6)" src="https://github.com/user-attachments/assets/10443152-23e9-4d56-a726-5d2ff935f5c5" /> </br>
-
-5. kafka Connector Source/Sink 활용 DB 동기화 </br>
-
-<img width="940" height="435" alt="image (7)" src="https://github.com/user-attachments/assets/78e43cc4-b4e4-467f-b6cf-6a66649a5790" /> </br>
-
-6. Topic Producing & Consuming </br>
-
-<img width="1054" height="711" alt="image (8)" src="https://github.com/user-attachments/assets/2e0fce6b-691d-4d7e-a2f2-b610d402ea3e" /> </br>
+<details>
+  <summary>6. Topic Producing & Consuming</summary>
+  <img width="1054" height="711" alt="image (8)" src="https://github.com/user-attachments/assets/2e0fce6b-691d-4d7e-a2f2-b610d402ea3e" /> </br>
 
 <img width="1079" height="608" alt="image (9)" src="https://github.com/user-attachments/assets/dd71ba2c-6aed-45a7-b95b-293eafe83ded" /> </br>
 
 <img width="1042" height="700" alt="image (10)" src="https://github.com/user-attachments/assets/ec45affc-2881-462e-95fb-00f183bb8040" /> </br>
+</details>
 
-7. 분산된 동일 서비스에서 Sink 활용한 DB 동기화 </br>
-
-<img width="1105" height="613" alt="image (11)" src="https://github.com/user-attachments/assets/eca97e6d-b04c-4189-b273-a0ecabdd1e25" /> </br>
+<details>
+  <summary>7. 분산된 동일 서비스에서 Sink 활용한 DB 동기화</summary>
+  <img width="1105" height="613" alt="image (11)" src="https://github.com/user-attachments/assets/eca97e6d-b04c-4189-b273-a0ecabdd1e25" /> </br>
 
 <img width="1056" height="780" alt="image (12)" src="https://github.com/user-attachments/assets/ac44019c-3c72-40b5-b444-5b4402c05d2c" /> </br>
 
 <img width="1852" height="644" alt="image (13)" src="https://github.com/user-attachments/assets/eb60a072-eef8-4d11-b002-9ecdeb2541d4" /> </br>
 
 <img width="1871" height="653" alt="image (14)" src="https://github.com/user-attachments/assets/b099dbf6-7775-44fa-a381-05d2762d2896" /> </br>
+</details>
 
-8. Zipkin & Prometheus </br>
-
-<img width="1919" height="856" alt="image (15)" src="https://github.com/user-attachments/assets/ad5f70fd-2315-4a09-a0f5-c5509daaf102" /> </br>
+<details>
+  <summary>8. Zipkin & Prometheus</summary>
+  <img width="1919" height="856" alt="image (15)" src="https://github.com/user-attachments/assets/ad5f70fd-2315-4a09-a0f5-c5509daaf102" /> </br>
 
 <img width="1280" height="441" alt="image (16)" src="https://github.com/user-attachments/assets/3155f0e2-792b-46fe-a685-757df39ce8f3" /> </br>
 
 <img width="1596" height="949" alt="image (17)" src="https://github.com/user-attachments/assets/162516a9-075b-4242-94c7-6fb505b20ac5" /> </br>
+</details>
 
-</br>
 
 -----------------------
