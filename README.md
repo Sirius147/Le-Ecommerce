@@ -43,11 +43,11 @@
 
 </br>
 
-1. MSA 구조 설계 및 서비스 간 통신 </br>
-2. Kafka를 활용한 비동기 이벤트 처리 </br>
-3. FeignClient 활용 </br>
-4. 분산 시스템에서의 추적(Tracing)과 모니터링(Monitoring) 구현 </br>
-5. 네트워크 그룹 기반 이미지 배포 </br>
+* MSA 구조 설계 및 서비스 간 통신 </br>
+* Kafka를 활용한 비동기 이벤트 처리 </br>
+* FeignClient 활용 </br>
+* 분산 시스템에서의 추적(Tracing)과 모니터링(Monitoring) 구현 </br>
+* 네트워크 그룹 기반 이미지 배포 </br>
 
 </br>
 
@@ -114,13 +114,13 @@
 
 🔄 Event-Driven Architecture (Kafka) </br>
 
-Order Service </br>
+* Order Service </br>
 주문 생성 시 OrderProducer를 통해 Kafka 토픽으로 메시지 발행 </br>
-Kafka </br>
+* Kafka </br>
 주문 데이터를 토픽으로 전달 </br>
-Kafka Connector (Sink) </br>
+* Kafka Connector (Sink) </br>
 토픽 데이터를 DB(User와 같은 DB)에 반영 </br>
-Catalog DB </br>
+* Catalog DB </br>
 재고 수량 리스너를 통해 업데이트 </br>
 
 </br>
@@ -133,12 +133,12 @@ Catalog DB </br>
 
 🧵 Distributed Tracing & Monitoring (Zipkin & Prometheus & Actuator) </br>
 
-1. 각 서비스 요청 흐름을 traceId 기반으로 다음 정보 추적 및 병목현상 관리 </br>
-* 서비스 간 호출 흐름 </br>
-* 처리 시간 </br>
-* method/path </br>
-* 연결된 서비스 </br>
-2. 트래픽 및 요청 횟수 등 확인 </br>
+* 각 서비스 요청 흐름을 traceId 기반으로 다음 정보 추적 및 병목현상 관리 </br>
+  * 서비스 간 호출 흐름 </br>
+  * 처리 시간 </br>
+  * method/path </br>
+  * 연결된 서비스 </br>
+* 트래픽 및 요청 횟수 등 확인 </br>
 
 </br>
 
