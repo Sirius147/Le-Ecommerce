@@ -67,9 +67,8 @@
   <img width="814" height="446" alt="image" src="https://github.com/user-attachments/assets/bcaee170-8a24-4036-ad52-02ff84c9059d" /> </br>
 </details>
 
-<details>
-  <summary> 🔹 API </summary>
-  
+🔹 API  </br>
+
 | 기능                     | URL(API Gateway)              | URI (!API Gateway)     | HTTP Method |
 |--------------------------|------------------------------|------------------------|-------------|
 | 사용자 정보 등록         | /user-service/users          | /users                 | POST        |
@@ -88,9 +87,9 @@
 
 </br>
 
+<details>
+  <summary>🔹 Microservices 핵심기능</summary>
 </details>
-
-🔹 Microservices 핵심기능 </br>
 
 * API Gateway </br>
 로드밸런스드 라우팅 및 인증필터 </br>
