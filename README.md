@@ -55,10 +55,6 @@
 
 </br>
 
-<details>
-  <summary>🏗️ 유스케이스</summary>
-  <img width="814" height="446" alt="image" src="https://github.com/user-attachments/assets/bcaee170-8a24-4036-ad52-02ff84c9059d" /> </br>
-</details>
 
 -------
 
@@ -66,22 +62,11 @@
 
 </br>
 
-🔹 Microservices 핵심기능 </br>
+<details>
+  <summary> 🔹 유스케이스</summary>
+  <img width="814" height="446" alt="image" src="https://github.com/user-attachments/assets/bcaee170-8a24-4036-ad52-02ff84c9059d" /> </br>
+</details>
 
-* API Gateway </br>
-로드밸런스드 라우팅 및 인증필터 </br>
-* User Service </br>
-회원 관리 / 토큰 인증 (Connector Sink로 이벤트 동기화) </br>
-* Order Service </br>
-주문 생성 및 이벤트 발행 (Producer) </br>
-* Catalog Service </br>
-상품 및 재고 관리 (kafkaListener를 활용한 Consumer) </br>
-* Config Service </br>
-중앙 설정 관리 서버 (native repo/ git repo) (Spring Cloud Config) (토큰 암호화) </br>
-* Eureka </br>
-서비스 디스커버리 </br>
-
-</br>
 <details>
   <summary> 🔹 API </summary>
   
@@ -104,6 +89,23 @@
 </br>
 
 </details>
+
+🔹 Microservices 핵심기능 </br>
+
+* API Gateway </br>
+로드밸런스드 라우팅 및 인증필터 </br>
+* User Service </br>
+회원 관리 / 토큰 인증 (Connector Sink로 이벤트 동기화) </br>
+* Order Service </br>
+주문 생성 및 이벤트 발행 (Producer) </br>
+* Catalog Service </br>
+상품 및 재고 관리 (kafkaListener를 활용한 Consumer) </br>
+* Config Service </br>
+중앙 설정 관리 서버 (native repo/ git repo) (Spring Cloud Config) (토큰 암호화) </br>
+* Eureka </br>
+서비스 디스커버리 </br>
+
+</br>
 
 
 -----------------
