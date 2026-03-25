@@ -2,7 +2,7 @@
 ----------------------
 🧾 Overview
 
-이 프로젝트는 MSA(MicroService Architecture) 기반의 전자상거래 시스템으로,
+이 프로젝트는 MSA(MicroService Architecture) 기반의 전자상거래 시스템으로, /br
 Kafka를 활용한 이벤트 기반 데이터 처리, 분산 추적, 모니터링, 그리고 컨테이너 기반 배포를 적용 및 실험한 프로젝트입니다.
 
 -----------------
