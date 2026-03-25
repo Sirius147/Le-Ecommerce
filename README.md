@@ -55,13 +55,10 @@
 
 </br>
 
-유스케이스
-
-</br>
-
-<img width="814" height="446" alt="image" src="https://github.com/user-attachments/assets/bcaee170-8a24-4036-ad52-02ff84c9059d" />
-
-</br>
+<details>
+  <summary>🏗️ 유스케이스</summary>
+  <img width="814" height="446" alt="image" src="https://github.com/user-attachments/assets/bcaee170-8a24-4036-ad52-02ff84c9059d" /> </br>
+</details>
 
 -------
 
@@ -107,26 +104,6 @@
 </br>
 
 </details>
-🔹 API </br>
-
-| 기능                     | URL(API Gateway)              | URI (!API Gateway)     | HTTP Method |
-|--------------------------|------------------------------|------------------------|-------------|
-| 사용자 정보 등록         | /user-service/users          | /users                 | POST        |
-| 전체 사용자 조회         | /user-service/users          | /users                 | GET         |
-| 사용자 정보,주문 내역 조회 | /user-service/{user-id}      | /users/{user_id}       | GET         |
-| 작동 상태 확인           | /user-service/users/health_check | /users/health_check    | GET         |
-| 환영 메시지              | /user-service/users/welcome  | /users/welcome         | GET         |
-
-</br>
-
-| 기능 | 마이크로 서비스 | URI(API Gateway) | HTTP Method |
-| --- | --- | --- | --- |
-| 상품 목록 조회 | Catalogs MicroService | /catalog-service/catalogs | GET |
-| 사용자 별 상품 주문 | Orders MicroService | /order-service/{user_id}/orders | POST |
-| 사용자 별 주문 내역 조회 | Orders MicroService | /order-service/{user_id}/orders | GET |
-
-</br>
-
 
 
 -----------------
