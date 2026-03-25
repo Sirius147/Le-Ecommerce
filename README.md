@@ -67,7 +67,10 @@
   <img width="814" height="446" alt="image" src="https://github.com/user-attachments/assets/bcaee170-8a24-4036-ad52-02ff84c9059d" /> </br>
 </details>
 
-🔹 API  </br>
+<details>
+  <summary>🔹 API</summary>
+</details>
+ 
 
 | 기능                     | URL(API Gateway)              | URI (!API Gateway)     | HTTP Method |
 |--------------------------|------------------------------|------------------------|-------------|
