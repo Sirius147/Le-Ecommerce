@@ -32,6 +32,8 @@
 * **Prometheus + Actuator** 기반 모니터링 </br>
 * Docker 기반 **동일 네트워크 그룹 컨테이너 환경** 구성 </br>
 
+</br>
+
 -----------
 
 </br>
@@ -46,25 +48,53 @@
 4. 분산 시스템에서의 추적(Tracing)과 모니터링(Monitoring) 구현 </br>
 5. 네트워크 그룹 기반 이미지 배포 </br>
 
+</br>
+
 -------------------------
 
 </br>
 
+유스케이스
+
+</br>
+
+<img width="814" height="446" alt="image" src="https://github.com/user-attachments/assets/bcaee170-8a24-4036-ad52-02ff84c9059d" />
+
+</br>
+
+-------
+
 🏗️ Architecture </br>
 🔹 Microservices 핵심기능 </br>
 
-API Gateway
-로드밸런스드 라우팅 및 인증필터
-User Service
-회원 관리 / 토큰 인증 (Connector Sink로 이벤트 동기화)
-Order Service
-주문 생성 및 이벤트 발행 (Producer)
-Catalog Service
-상품 및 재고 관리 (kafkalistener를 활용한 Consumer)
-Config Service
-중앙 설정 관리 서버 (Spring Cloud Config)
-Eureka
-서비스 디스커버리
+* API Gateway </br>
+로드밸런스드 라우팅 및 인증필터 </br>
+* User Service </br>
+회원 관리 / 토큰 인증 (Connector Sink로 이벤트 동기화) </br>
+* Order Service </br>
+주문 생성 및 이벤트 발행 (Producer) </br>
+* Catalog Service </br>
+상품 및 재고 관리 (kafkaListener를 활용한 Consumer) </br>
+* Config Service </br>
+중앙 설정 관리 서버 (Spring Cloud Config) </br>
+* Eureka </br>
+서비스 디스커버리 </br>
+
+</br>
+
+🔹 API </br>
+
+기능	URL(API Gateway)	URI( !API Gateway)	HTTP Method
+사용자 정보 등록	/user-service/users	/users	POST
+전체 사용자 조회	/user-service/users	/users	GET
+사용자 정보,주문 내역 조회	/user-service/{user-id}	/users/{user_id}	GET
+작동 상태 확인	/user-service/users/health_check	/users/health_check	GET
+환영 메시지	/user-service/users/welcomne	/users/welcome	GET
+
+
+</br>
+
+-----------------
 
 🔄 Event-Driven Architecture (Kafka)
 ✔️ Order → Catalog 흐름
